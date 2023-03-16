@@ -48,4 +48,5 @@ dependencies {
     implementation "androidx.fragment:fragment-ktx:$fragmentKtxVersion"
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycleViewmodelKtxVsersion"
 
+    implementation "com.github.bumptech.glide:glide:4.13.2"
 }
