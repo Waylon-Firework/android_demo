@@ -51,6 +51,6 @@ dependencies {
     implementation "com.github.bumptech.glide:glide:4.13.2"
     implementation(project(":libraries:my-image-loader"))
 
-//    implementation 'com.google.auto.service:auto-service:1.0'
-//    annotationProcessor 'com.google.auto.service:auto-service:1.0'
+    compileOnly 'com.google.auto.service:auto-service:1.0.1'
+    kapt 'com.google.auto.service:auto-service:1.0.1'
 }
