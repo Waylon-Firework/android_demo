@@ -1,0 +1,21 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="AppTheme" parent="BaseAppTheme" />
+
+    <style name="BaseAppTheme" parent="@style/Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:statusBarColor">#121212</item>
+        <item name="android:windowBackground">#ffffff</item>
+        <item name="android:navigationBarColor">#ffffff</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">true</item>
+        <item name="android:windowContentTransitions">true</item>
+        <item name="appBarLayoutStyle">@style/App.Appbar</item>
+    </style>
+
+    <style name="App.Appbar" parent="Widget.MaterialComponents.AppBarLayout.Primary">
+        <item name="materialThemeOverlay">@style/App.ThemeOverlay.Appbar</item>
+    </style>
+
+    <style name="App.ThemeOverlay.Appbar" parent="ThemeOverlay.MaterialComponents.Dark.ActionBar">
+        <item name="colorOnSurface">#121212</item>
+    </style>
+</resources>

@@ -1,0 +1,71 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+}
+
+android {
+    compileSdk 32
+
+    signingConfigs {
+        debug {
+            storeFile file(rootProject.file("debug.keystore"))
+            storePassword 'android'
+            keyAlias 'androiddebugkey'
+            keyPassword 'android'
+        }
+        release {
+            storeFile file(rootProject.file("release.keystore"))
+            storePassword 'discus'
+            keyAlias 'discus'
+            keyPassword 'discus'
+        }
+    }
+
+    defaultConfig {
+        applicationId "com.ld.demo"
+        minSdk 21
+        targetSdk 32
+        versionCode 1
+        versionName "1.0.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        debug {
+            versionNameSuffix "-debug"
+            manifestPlaceholders["app_name"] = "@string/app_name_debug"
+            signingConfig signingConfigs.debug
+        }
+        release {
+            manifestPlaceholders["app_name"] = "@string/app_name"
+            signingConfig signingConfigs.release
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    buildFeatures {
+        viewBinding true
+    }
+}
+
+dependencies {
+    implementation "androidx.core:core-ktx:${coreKtxVersion}"
+    implementation "androidx.appcompat:appcompat:${appcompatVersion}"
+    implementation "com.google.android.material:material:${materialVersion}"
+    implementation "androidx.constraintlayout:constraintlayout:${constraintlayoutVersion}"
+    implementation "androidx.navigation:navigation-fragment-ktx:${navigationFragmentKtxVersion}"
+    implementation "androidx.navigation:navigation-ui-ktx:${navigationUiKtxVersion}"
+    testImplementation "junit:junit:${junitVersion}"
+    androidTestImplementation "androidx.test.ext:junit:${extJunitVersion}"
+    androidTestImplementation "androidx.test.espresso:espresso-core:${espressoCoreVersion}"
+
+
+}

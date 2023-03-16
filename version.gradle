@@ -1,0 +1,18 @@
+buildscript {
+    ext {
+        coreKtxVersion = '1.7.0'
+        appcompatVersion = '1.3.0'
+        materialVersion = '1.5.0-alpha04'
+        constraintlayoutVersion = '2.0.4'
+        navigationFragmentKtxVersion = '2.3.5'
+        navigationUiKtxVersion = '2.3.5'
+        junitVersion = '4.13.2'
+        extJunitVersion = '1.1.3'
+        espressoCoreVersion = '3.4.0'
+
+        kotlinxCoroutinesAndroidVersion = '1.4.0'
+        lifecycleViewmodelKtxVsersion = '2.4.1'
+        fragmentKtxVersion = '1.3.2'
+        swiperefreshlayoutVersion = "1.1.0"
+    }
+}
