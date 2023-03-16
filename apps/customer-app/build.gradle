@@ -67,8 +67,8 @@ dependencies {
     androidTestImplementation "androidx.test.ext:junit:${extJunitVersion}"
     androidTestImplementation "androidx.test.espresso:espresso-core:${espressoCoreVersion}"
 
-    implementation(project(":libraries:picasso-image-loader"))
+//    implementation(project(":libraries:picasso-image-loader"))
     implementation(project(":libraries:glide-image-loader"))
-//    implementation(project(":libraries:my-image-loader"))
+    implementation(project(":libraries:my-image-loader"))
 
 }

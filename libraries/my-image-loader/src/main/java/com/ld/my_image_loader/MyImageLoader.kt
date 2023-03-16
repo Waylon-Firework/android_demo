@@ -1,4 +1,7 @@
 package com.ld.my_image_loader
 
-class MyImageLoader {
+import android.widget.ImageView
+
+interface MyImageLoader {
+    fun load(imageView: ImageView, imageUrl: String)
 }
