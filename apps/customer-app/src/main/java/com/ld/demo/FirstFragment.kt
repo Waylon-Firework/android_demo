@@ -8,7 +8,7 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.ld.demo.databinding.FragmentFirstBinding
 import com.ld.my_image_loader.MyImageLoader
-import com.ld.my_image_loader.ServiceHelper.getService
+import com.ld.my_image_loader.ServiceHelper
 
 
 /**
@@ -40,7 +40,7 @@ class FirstFragment : Fragment() {
         }
 //        val imageLoader = PicassoImageLoader()
 //        val imageLoader = GlideImageLoader()
-        val imageLoader = getService(MyImageLoader::class.java)
+        val imageLoader = ServiceHelper.getService(MyImageLoader::class.java)
         imageLoader?.load(binding.imageViewFirst, "https://www.google.com/images/branding/googlelogo/2x/googlelogo_light_color_272x92dp.png")
     }
 
