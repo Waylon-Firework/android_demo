@@ -14,3 +14,6 @@ dependencyResolutionManagement {
 }
 rootProject.name = "demo"
 include ':apps:customer-app'
+include ':libraries:picasso-image-loader'
+include ':libraries:glide-image-loader'
+include ':libraries:my-image-loader'
